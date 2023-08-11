@@ -5,7 +5,7 @@ from data_loader import load_data
 from train import train
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 np.random.seed(555)
-
+'''
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default='movie', help='which dataset to use')
 parser.add_argument('--dim', type=int, default=16, help='dimension of entity and relation embeddings')
@@ -38,7 +38,7 @@ parser.add_argument('--item_update_mode', type=str, default='plus_transform',
 parser.add_argument('--using_all_hops', type=bool, default=True,
                     help='whether using outputs of all hops or just the last hop when making prediction')
 
-'''
+
 parser.add_argument('--use_cuda', type=bool, default=True, help='whether to use gpu')
 args = parser.parse_args()
 
